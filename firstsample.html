@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جوراب‌های آبی آسمانی | صفحه اصلی</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#93C5FD'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-b from-primary to-white min-h-screen">
+
+    <!-- ✅ هدر با آیکون سبد خرید -->
+    <header class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+        <h1 class="text-2xl font-bold text-primary">🧦 جوراب‌های آبی آسمانی</h1>
+        <a href="cart.html" class="relative inline-flex items-center">
+            <i data-feather="shopping-cart" class="w-6 h-6 text-primary"></i>
+            <span id="cart-count"
+                  class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5">
+                  0
+            </span>
+        </a>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+
+        <!-- بخش معرفی -->
+        <section class="hero bg-white rounded-3xl shadow-xl p-8 mb-12">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">جوراب‌های با کیفیت و شیک</h1>
+                    <p class="text-lg text-gray-600 mb-6">با جدیدترین مدل‌های جوراب زنانه و مردانه با کیفیت عالی و قیمت مناسب</p>
+                    <a href="products.html" class="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-flex items-center">
+                        مشاهده محصولات
+                        <i data-feather="arrow-left" class="mr-2"></i>
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="http://static.photos/blue/640x360/1" alt="جوراب‌های شیک" class="rounded-2xl w-full h-auto shadow-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- بخش محصولات پرفروش -->
+        <section class="popular-products mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">محصولات پرفروش</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="http://static.photos/blue/320x240/2" alt="جوراب ورزشی" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">جوراب ورزشی مردانه</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold">120,000 تومان</span>
+                            <button class="add-to-cart bg-primary hover:bg-blue-700 text-white py-1 px-3 rounded-full text-sm transition duration-300">افزودن به سبد</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="http://static.photos/blue/320x240/3" alt="جوراب زنانه" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">جوراب زنانه طرح دار</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold">95,000 تومان</span>
+                            <button class="add-to-cart bg-primary hover:bg-blue-700 text-white py-1 px-3 rounded-full text-sm transition duration-300">افزودن به سبد</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="http://static.photos/blue/320x240/4" alt="جوراب بچگانه" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">جوراب بچگانه رنگارنگ</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold">75,000 تومان</span>
+                            <button class="add-to-cart bg-primary hover:bg-blue-700 text-white py-1 px-3 rounded-full text-sm transition duration-300">افزودن به سبد</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="http://static.photos/blue/320x240/5" alt="جوراب حرفه‌ای" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">جوراب حرفه‌ای دویدن</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold">150,000 تومان</span>
+                            <button class="add-to-cart bg-primary hover:bg-blue-700 text-white py-1 px-3 rounded-full text-sm transition duration-300">افزودن به سبد</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ✅ بخش نظرات مشتریان -->
+        <section class="testimonials mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-10 text-center">نظرات مشتریان</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="مشتری" class="w-12 h-12 rounded-full ml-4">
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-800">علی رضایی</h4>
+                            <p class="text-sm text-gray-500">خریدار تأیید شده</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">جوراب‌ها خیلی باکیفیت و راحت بودن. بسته‌بندی عالی و ارسال سریع. ممنون از تیم حرفه‌ای شما!</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="مشتری" class="w-12 h-12 rounded-full ml-4">
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-800">نگار محمدی</h4>
+                            <p class="text-sm text-gray-500">خریدار تأیید شده</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">طرح‌هاشون فوق‌العاده زیباست 😍 من برای هدیه خریدم و خیلی راضی بودم. پیشنهاد می‌کنم!</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="مشتری" class="w-12 h-12 rounded-full ml-4">
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-800">مهدی نیک‌فر</h4>
+                            <p class="text-sm text-gray-500">خریدار تأیید شده</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">قیمت مناسب و ارسال سریع داشتند. واقعاً ارزش خرید داره، حتماً دوباره سفارش می‌دم.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ✅ بخش عضویت در خبرنامه -->
+        <section class="newsletter bg-primary bg-opacity-10 rounded-3xl p-10 text-center mb-20">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">عضویت در خبرنامه</h2>
+            <p class="text-gray-600 mb-6">اولین نفری باشید که از تخفیف‌ها و محصولات جدید مطلع می‌شود 🌟</p>
+            <form class="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="ایمیل خود را وارد کنید..." class="w-full sm:w-auto flex-grow py-3 px-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                <button type="submit" class="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">عضویت</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- ✅ فوتر -->
+    <footer class="bg-primary text-white py-10 mt-10">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+            <div>
+                <h3 class="text-xl font-bold mb-4">درباره ما</h3>
+                <p class="text-blue-100 leading-relaxed">فروشگاه "جوراب‌های آبی آسمانی" با هدف ارائه‌ی جوراب‌های باکیفیت و متنوع برای تمام سلیقه‌ها فعالیت می‌کند.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">لینک‌های مفید</h3>
+                <ul class="space-y-2">
+                    <li><a href="products.html" class="hover:underline">محصولات</a></li>
+                    <li><a href="about.html" class="hover:underline">درباره ما</a></li>
+                    <li><a href="contact.html" class="hover:underline">تماس با ما</a></li>
+                    <li><a href="faq.html" class="hover:underline">سؤالات متداول</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">خدمات مشتریان</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:underline">پیگیری سفارش</a></li>
+                    <li><a href="#" class="hover:underline">شرایط بازگشت کالا</a></li>
+                    <li><a href="#" class="hover:underline">روش‌های ارسال</a></li>
+                    <li><a href="#" class="hover:underline">قوانین و مقررات</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">ارتباط با ما</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-2">
+                        <i data-feather="map-pin" class="w-5 h-5"></i> تهران، خیابان آزادی، پلاک ۲۵
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-feather="phone" class="w-5 h-5"></i> 021-12345678
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-feather="mail" class="w-5 h-5"></i> info@bluesocks.ir
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center text-blue-100 mt-10 border-t border-blue-300 pt-4">
+            <p>© 2025 کلیه حقوق محفوظ است | طراحی توسط تیم <span class="font-bold text-white">BlueSocks</span></p>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+
+        // افزودن محصول به سبد خرید
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.closest('.product-card');
+                const name = card.querySelector('h3').textContent;
+                const price = card.querySelector('span').textContent;
+                const image = card.querySelector('img').src;
+
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push({ name, price, image });
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartCount();
+                alert('✅ محصول به سبد خرید اضافه شد!');
+            });
+        });
+
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.getElementById('cart-count').textContent = cart.length;
+        }
+        updateCartCount();
+    </script>
+</body>
+</html>
+<!-- 💬 ویجت چت پشتیبانی -->
+<div id="chat-widget" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+
+    <!-- دکمه باز کردن چت -->
+    <button id="chat-toggle"
+        class="flex items-center bg-primary text-white px-4 py-3 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
+        <i data-feather="message-circle" class="w-5 h-5 ml-2"></i>
+        <span class="font-medium hidden sm:inline">پاسخگوی شما هستیم</span>
+    </button>
+
+    <!-- پنجره چت -->
+    <div id="chat-box"
+        class="hidden mt-3 bg-white w-80 rounded-2xl shadow-xl border border-gray-200 overflow-hidden animate__animated animate__fadeInUp">
+        <div class="bg-primary text-white px-4 py-3 flex justify-between items-center">
+            <h4 class="font-bold">پشتیبانی آنلاین</h4>
+            <button id="chat-close" class="hover:text-gray-200">
+                <i data-feather="x"></i>
+            </button>
+        </div>
+
+        <div id="chat-messages" class="p-4 h-64 overflow-y-auto space-y-3 bg-blue-50">
+            <div class="bg-white rounded-xl px-3 py-2 shadow text-sm text-gray-800 w-fit max-w-[70%]">
+                👋 سلام! چطور می‌تونم کمکتون کنم؟
+            </div>
+        </div>
+
+        <form id="chat-form" class="flex border-t border-gray-200">
+            <input id="chat-input" type="text" placeholder="پیام خود را بنویسید..."
+                class="flex-grow p-3 focus:outline-none text-sm" />
+            <button type="submit" class="px-4 text-primary hover:text-blue-700">
+                <i data-feather="send"></i>
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- 📜 اسکریپت چت -->
+<script>
+    const chatToggle = document.getElementById("chat-toggle");
+    const chatBox = document.getElementById("chat-box");
+    const chatClose = document.getElementById("chat-close");
+    const chatForm = document.getElementById("chat-form");
+    const chatInput = document.getElementById("chat-input");
+    const chatMessages = document.getElementById("chat-messages");
+
+    chatToggle.addEventListener("click", () => {
+        chatBox.classList.toggle("hidden");
+        feather.replace();
+    });
+
+    chatClose.addEventListener("click", () => {
+        chatBox.classList.add("hidden");
+    });
+
+    chatForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const text = chatInput.value.trim();
+        if (!text) return;
+        addMessage(text, "user");
+        chatInput.value = "";
+
+        // پاسخ خودکار نمایشی
+        setTimeout(() => {
+            addMessage("پیام شما دریافت شد ✅", "bot");
+        }, 1000);
+    });
+
+    function addMessage(text, sender) {
+        const msg = document.createElement("div");
+        msg.classList.add("rounded-xl", "px-3", "py-2", "shadow", "text-sm", "max-w-[70%]");
+        msg.textContent = text;
+        if (sender === "user") {
+            msg.classList.add("bg-primary", "text-white", "self-end", "ml-auto");
+        } else {
+            msg.classList.add("bg-white", "text-gray-800");
+        }
+        chatMessages.appendChild(msg);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    feather.replace();
+</script>
+
+    <!-- 🔔 پاپ‌آپ خرید -->
+    <div id="notif" class="hidden fixed bottom-4 left-4 bg-white border shadow-xl px-4 py-3 rounded-full text-sm">
+      🧦 <span id="notif-text">مریم از رشت الان خرید کرد!</span>
+    </div> 
+   
