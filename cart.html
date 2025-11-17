@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سبد خرید | جوراب‌های آبی آسمانی</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gradient-to-b from-blue-300 to-blue-100 min-h-screen flex flex-col items-center py-10">
+
+    <h1 class="text-3xl font-bold text-gray-800 mb-8 flex items-center gap-2">
+        <i data-feather="shopping-cart" class="w-6 h-6"></i> سبد خرید شما
+    </h1>
+
+    <div id="cart-container" class="bg-white rounded-3xl shadow-xl p-8 w-11/12 md:w-2/3 max-w-2xl"></div>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const container = document.getElementById('cart-container');
+
+        if (cart.length === 0) {
+            container.innerHTML = `
+                <div class="text-center text-gray-600">
+                    <i data-feather="shopping-bag" class="w-12 h-12 text-blue-500 mb-4"></i>
+                    <p>سبد خرید شما خالی است.</p>
+                    <a href="products.html" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full">مشاهده محصولات</a>
+                </div>`;
+        } else {
+            let total = 0;
+            container.innerHTML = `
+                <div class="divide-y divide-gray-200 space-y-4">
+                    ${cart.map(item => {
+                        total += item.price;
+                        return `
+                            <div class="flex items-center justify-between py-3">
+                                <div class="flex items-center gap-4">
+                                    <img src="${item.image}" class="w-16 h-16 rounded-lg" alt="${item.name}">
+                                    <div>
+                                        <h3 class="font-bold text-gray-800">${item.name}</h3>
+                                        <p class="text-gray-500">${item.price.toLocaleString()} تومان</p>
+                                    </div>
+                                </div>
+                                <button onclick="removeItem('${item.name}')" class="text-red-500 hover:text-red-700">
+                                    <i data-feather="trash-2"></i>
+                                </button>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+                <div class="text-center mt-6">
+                    <p class="text-lg font-bold text-gray-800 mb-3">جمع کل: ${total.toLocaleString()} تومان</p>
+                    <button onclick="checkout()" class="bg-green-600 hover:bg-green-700 text-white py-2 px-6 rounded-full text-lg">ادامه پرداخت</button>
+                </div>
+            `;
+        }
+
+        function removeItem(name) {
+            cart = cart.filter(item => item.name !== name);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            location.reload();
+        }
+
+        function checkout() {
+            alert('✅ پرداخت با موفقیت انجام شد (شبیه‌سازی)');
+            localStorage.removeItem('cart');
+            location.reload();
+        }
+
+        feather.replace();
+    </script>
+</body>
+</html>
